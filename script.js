@@ -1,27 +1,47 @@
-'use strict';
+3 4 6;
+'string', "string", `string`;
+true / false
 
+let a;
+console.log(a);
 
-var number =5;
-var string ="hello";
-var sym = Symbol();
-var boolean = true;
-null;
-undefined;
-var obj = {};
+const obj = {
+    name: 'Alex'
+}
+             0  1  2  3
+const arr = [1, 2, 4, 6];
 
-console.log(4/0);
-console.log ('string'*4);
+// 1)
+console.log (typeof(String(4)));
+// 2)
+console.log (typeof("q" + false));
+console.log('https//vk.com/catalog/' + 5);
 
-let something;
-console.log(something);
+// - to Number 
 
-let person = {
-    name: "john",
-    age: 25,
-    isMarried: false
-};
-console.log(person.["name"]);
+//1) 
+console.log (typeof(Number('5')));
+//2)
+console.log(typeof(5 + +'5'));
+//3)
+console.log (typeof(parseInt('15px', 10)));
 
-let arr = ['plum.png','orange.jpeg','apple.bnp']
+let ans = +promt("hello", '');
 
-console.log (arr[0])
+//0, '', null, undefined, NaN
+
+let switcher = null;
+
+if (switcher) {
+    console.log("working...")
+}
+
+switcher = 1;
+
+if (switcher) {
+    console.log("working...")
+}
+//2)
+console.log (typeof(Boolean('5')));
+//3)
+console.log (typeof(!!'5'));
