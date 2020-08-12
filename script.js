@@ -1,47 +1,13 @@
-3 4 6;
-'string', "string", `string`;
-true / false
+let arr = ['plum.png', 'orange.jpeg', 'apple.bmp'];
 
-let a;
-console.log(a);
+console.log(arr[0]);
 
-const obj = {
-    name: 'Alex'
-}
-             0  1  2  3
-const arr = [1, 2, 4, 6];
+ alert("hello"); 
 
-// 1)
-console.log (typeof(String(4)));
-// 2)
-console.log (typeof("q" + false));
-console.log('https//vk.com/catalog/' + 5);
+let answer = confirm("Are you here?");
 
-// - to Number 
+console.log(answer);
 
-//1) 
-console.log (typeof(Number('5')));
-//2)
-console.log(typeof(5 + +'5'));
-//3)
-console.log (typeof(parseInt('15px', 10)));
+let answer = promt("Есть ли вам 18?", "Да");
 
-let ans = +promt("hello", '');
-
-//0, '', null, undefined, NaN
-
-let switcher = null;
-
-if (switcher) {
-    console.log("working...")
-}
-
-switcher = 1;
-
-if (switcher) {
-    console.log("working...")
-}
-//2)
-console.log (typeof(Boolean('5')));
-// 3)
-console.log (typeof(!!'5'));
+console.log(typeof(null))
