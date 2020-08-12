@@ -43,5 +43,5 @@ if (switcher) {
 }
 //2)
 console.log (typeof(Boolean('5')));
-//3)
+// 3)
 console.log (typeof(!!'5'));
