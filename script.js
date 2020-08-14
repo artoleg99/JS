@@ -1,33 +1,36 @@
-'use strict'
-let arr = ['plum.png', 'orange.jpeg', 'apple.bmp'];
+'use strict';
 
-// console.log(arr[0]);
+if (2*4 == 7) {
+    console.log("верно!")
+} else {
+    console.log("Неверно!")
 
-// alert("hello"); 
+let num = 50;
 
-// let answer = confirm("Are you here?");
+if (num <49) {
+    console.log("неверно!")
+} else if (num > 100) {
+    console.log("Много!")
+} else {
+    console.log("Верно!")
+};
 
-// console.log(answer);
+(num == 50) ? console.log("верно!") : console.log('Неверно!');
 
-// let answer = +prompt("Есть ли вам 18?", "Да"); 
-
-// console.log(typeof(answer));
-
-// console.log("arr"+ " - object");
-// console.log(4 + + " - object");
-let incr = 10,
-    descr = 10;
-
-console.log(incr++);
-console.log(descr--);
-
-console.log(5%2);
-console.log("2" === 2);
-
-let isChecked = true,
-    isClose = false;
-
-console.log(isChecked || !isClose);
-
-
-
+switch (num) {
+    case num < 49:
+        console.log("неверно!");
+        break;
+    case num > 100:
+        console.log("Много!");
+        break;
+    case num > 80:
+        console.log("Много!");
+        break;
+    case 50:
+        console.log("Верно!");
+        break;
+    default:
+        console.log("Что-то пошло не так!")
+        break;
+}
