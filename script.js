@@ -1,21 +1,41 @@
-'use strict';
+let num = 20;
 
-let num = 50;
-
-while (num < 55) {
+function showFirstMessage(text) {
+    alert(text);
+    let num = 10;
     console.log(num);
-    num++;
 }
 
-do {
-    console.log(num);
-    num++;
-}
-while (num <55);
+showFirstMessage("hello");
+console.log(num);
 
-for (let i = 1; i < 8; i++) {
-    if (i ==6){
-        continue
-    }
-    console.log(i)
+
+let calc = function (a,b) {
+    return(a + b);
 }
+
+let calc = (a,b)=> a+b
+
+console.log(calc(3,4));
+
+console.log(calc(8,4));
+
+function retVar() {
+    let num = 50;
+    return num;
+}
+
+let anotherNum = retVar();
+console.log(anotherNum);
+
+let str = "test";
+console.log(str.length);
+
+console.log(str.toUpperCase());
+console.log(str.toLowerCase());
+
+let twelve = "12.2px";
+
+console.log(Math.round(twelve));
+console.log(parseInt(twelve));
+console.log(parseFloat(twelve));
