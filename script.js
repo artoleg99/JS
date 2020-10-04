@@ -1,32 +1,37 @@
-let box = document.getElementById('box'),
-    btn = document.getElementsByTagName('button'),
-    circle = document.getElementsByClassName('circle'),
-    heart = document.querySelectorAll('.wrapper .heart'),
-    oneHeart = document.querySelector('.heart');
+let btn = document.querySelectorAll('button'),
+    wrap = document.querySelector('.wrapper'),
+    link = document.querySelector('a');
 
-box.style.backgroundColor = 'blue';
-btn[1].style.borderRadius = '100%';
+// btn[0].onclick = function(){
+//     alert('вы нажали первую кнопку');
+// };
+// btn[0].onclick = function(){
+//     alert('вы опять нажали первую кнопку');
+// };
 
-circle[0].style.backgroundColor = 'red';
-circle[1].style.backgroundColor = 'yellow';
-circle[2].style.backgroundColor = 'green';
+// btn[0].addEventListener('click', function(event) {
+    
+//     console.log('произошло событие: ' + event.type + ' на элементе ' + event.target);
 
-// for (let i = 0; i < heart.length; i++) {
-//     heart[i].style.backgroundColor = 'blue';
-// }
-
-// heart.forEach(function(item, i , hearts) {
-//     item.style.backgroundColor = 'blue';
 // });
 
-let div = document.createElement('div'),
-    text = document.createTextNode('тут был я');
-div.textContent = 'hello world!';
+// wrap.addEventListener('click', function(){
+//     console.log('произошло событие: ' + event.type + ' на элементе ' + event.target);
 
-document.body.insertBefore(div, circle[0]);
-document.body.removeChild(circle[1]);
-wrapper.removeChild(heart[1]);
+// });
 
-document.body.replaceChild(heart[1]);
+link.addEventListener('click', function(event){
+    event.preventDefault();
+    console.log('произошло событие: ' + event.type + ' на элементе ' + event.target);
 
-console.log(div);
+});
+
+btn.forEach(function(item) {
+    item.addEventListener('mouseleave', function(){
+        console.log('вышли');
+    });
+});
+
+// btn[0].addEventListener('mouseenter', function(){
+//     alert('вы навели на первую кнопку');
+// });
