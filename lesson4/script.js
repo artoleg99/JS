@@ -1,18 +1,19 @@
-let box = document.querySelector('.box'),
-    btn = document.querySelector('button');
+function User(name, id) {
+    this.name = name;
+    this.id = id;
+    this.human = true;
+    this.hello = function() {
+        console.log('hello' + this.name);
+    };
+}
 
-let width = box.clientWidth,
-    height = box.clientHeight;
+User.prototype.exit = function(name) {
+    console.log('пользователь ' + this.name +' ушел');
+};
 
-console.log(width);
-console.log(height);
-console.log(box.getBoundingClientRect().left); 
+let ivan = new User('Ivan', 25),
+    alex = new User('Alex', 20);
 
-console.log(document.documentElement.clientWidth);
-console.log(document.documentElement.clientHeight);
-
-btn.addEventListener('click', function() {
-    console.log(box.scrollTop);
-    box.scrollTop = 0;
-
-});
+console.log(ivan);
+console.log(alex);
+ivan.exit();
