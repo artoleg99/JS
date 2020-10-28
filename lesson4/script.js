@@ -1,35 +1,36 @@
+$(document).ready(function() {
+    $('.list-item:first').hover(function() {
+        $(this).toggleClass('active');
+    });
 
-let inputRub = document.getElementById('rub'),
-    inputUsd = document.getElementById('usd');
+    $('.list-item:eq(2)').on('click', function() {
+        $('.image:even').fadeToggle('slow');
+    });
 
-    function catchData() {
+    $('.list-item:eq(4)').on('click', function() {
+        $('.image:odd').animate(
+            {
+                opacity: 'toggle',
+                height: 'toggle'
+            }, 3000
+        );
+    });
+});
+// Angular
+// 1. node.js -> npm
+// 2. TypeScript
+// 3. Webpack
+// 4. MvC ( modal view controller)
+// 5. Angular
 
-        return new Promise(function(resolve, reject){
-            let request = new XMLHttpRequest();
-            request.open("GET", "js/current.json");
+//React 
+// 1. node.js -> npm
+// 2. Babel
+// 3. JSX
+// 4. Webpack
+// 5. React
 
-            request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-            request.send();
-
-            request.onload = function() {
-                if(request.readyState === 4) {
-                        if(request.status == 200) {
-                            resolve(this.response);
-                        }
-                        else {
-                            reject();
-
-                        }
-                }
-            };
-        });
-    }
-
-catchData()
-.then(response => {
-    console.log(response);
-    let data = JSON.parse(response);
-    inputUsd.value = inputRub.value / data.usd;
-})
-.then(() => console.log(5000))
-.catch(() => inputUsd.value = "Что-то пошло не так");
+// Vue
+// 1. node.js -> npm
+// 2. Babel
+// 3. Webpack
