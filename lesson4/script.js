@@ -1,36 +1,33 @@
-$(document).ready(function() {
-    $('.list-item:first').hover(function() {
-        $(this).toggleClass('active');
-    });
+function User (name, age) {
+    this.name = name;
+    let userAge = age;
 
-    $('.list-item:eq(2)').on('click', function() {
-        $('.image:even').fadeToggle('slow');
-    });
+    this.getAge = function() {
+        return userAge;
+    };
 
-    $('.list-item:eq(4)').on('click', function() {
-        $('.image:odd').animate(
-            {
-                opacity: 'toggle',
-                height: 'toggle'
-            }, 3000
-        );
-    });
-});
-// Angular
-// 1. node.js -> npm
-// 2. TypeScript
-// 3. Webpack
-// 4. MvC ( modal view controller)
-// 5. Angular
+    this.setAge = function(age) {
+        if (typeof age === 'number' && age > 0 && age < 110) {
+            userAge = age;
+        } else {
+            console.log('недопустимое значение');
+        }
+    };
+    this.say = function() {
+        console.log(`Имя пользователя ${this.name}, возраст ${this.userAge}`);
 
-//React 
-// 1. node.js -> npm
-// 2. Babel
-// 3. JSX
-// 4. Webpack
-// 5. React
+    };
+}
 
-// Vue
-// 1. node.js -> npm
-// 2. Babel
-// 3. Webpack
+let user = new User('ivan', 25);
+console.log(user.name);
+console.log(user.userAge);
+user.say();
+console.log(user.getAge());
+user.setAge('30');
+console.log(user.getAge());
+
+
+// user.age = 30;
+// user.name = 'Alex';
+// user.say();
